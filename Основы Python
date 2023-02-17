@@ -52,3 +52,34 @@ if width<=15 and length<=15 and height<=15: print ('Коробка №1')
 elif width>200 or length>200 or height>200: print ('Упаковка для лыж')
 elif 15<width<50 or 15<length<50 or 15<height<50: print ('Коробка №2')
 else: print ('Коробка №3')
+
+#Задание 5. Дана переменная, в которой хранится шестизначное число (номер проездного билета). Напишите программу, которая будет определять, является ли данный билет “счастливым”.
+number = int(input('Введите шестизначное число: '))
+right_part = number % 10 + number // 10 % 10 + number // 100 % 10
+left_part = number // 1000 % 10 + number // 10000 % 10 + number //  100000 % 10
+if right_part == left_part:
+  print('Счастливое число')
+else:
+  print('Несчастливое число') 
+
+#Задание 6. Напишите программу, которая сможет вычислять площади трех фигур (круг, треугольник и прямоугольник). Тип фигуры запрашиваем через пользовательский ввод, после чего делаем запрос характеристик фигуры:
+
+figure=input('Введите тип фигуры: ')
+if figure=='Круг':
+  radius = int(input('Введите радиус круга: '))
+  area = 3.14 * radius **2
+  print ('Площадь круга: ', area)
+elif figure=='Треугольник':
+  triangle_a = int(input ('Введите длину стороны A: ')) 
+  triangle_b = int(input ('Введите длину стороны B: '))  
+  triangle_c = int(input ('Введите длину стороны C: '))
+  p=(triangle_a+triangle_b+triangle_c)/2
+  area = round((p*(p-triangle_a)*(p-triangle_b)*(p-triangle_c))**0.5,2) 
+  print ('Площадь треугольника: ', area)
+elif figure=='Прямоугольник':
+  rect_a = int(input('Введите длину стороны A: '))
+  rect_b = int(input('Введите длину стороны B: '))
+  area = rect_a * rect_b
+  print ('Площадь прямоугольника: ', area)
+else:
+  print ('Фигура не найдена') 
