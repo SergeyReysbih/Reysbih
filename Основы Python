@@ -1,0 +1,49 @@
+#Задание 1
+phrase_1 = 'Насколько проще было бы писать программы, если бы не заказчики'
+phrase_2 = '640Кб должно хватить для любых задач. Билл Гейтс (по легенде)'
+if phrase_1>phrase_2: print ('фраза 1 длиннее фразы 2')
+elif phrase_1<phrase_2: print('фраза 2 длиннее фразы 1')
+else: print ('фразы равной длины')
+
+#Задание 2
+year=int(input("Введите год: "))
+if year%4==0: print('високосный год')
+else: print('обычный год')
+
+#Задание 3
+day = int(input("Введите день: "))
+month = input("Введите месяц: ")
+if month =='декабрь':
+	знак ='Стрелец' if (day < 22) else 'Козерог'
+elif month =='январь':
+	знак ='Козерог' if (day < 20) else 'Водолей'
+elif month =='февраль':
+	знак ='Водолей' if (day < 19) else 'Рыбы'
+elif month =='март':
+	знак ='Рыбы' if (day < 21) else 'Овен'
+elif month =='апрель':
+	знак ='Овен' if (day < 20) else 'Телец'
+elif month =='май':
+	знак ='Телец' if (day < 21) else 'Близнецы'
+elif month =='июнь':
+	знак ='Близнецы' if (day < 21) else 'Рак'
+elif month =='июль':
+	знак ='Рак' if (day < 23) else 'Лев'
+elif month =='август':
+	знак ='Лев' if (day < 23) else 'Дева'
+elif month =='сентябрь':
+	знак ='Дева' if (day < 23) else 'Весы'
+elif month =='октябрь':
+	знак ='Весы' if (day < 23) else 'Скорпион'
+elif month =='ноябрь':
+	знак ='Скорпион' if (day < 22) else 'Стрелец'
+print("Ваш знак зодиака:",знак)
+
+#Задание 4
+width = 20
+length = 30
+height = 15
+if width<=15 and length<=15 and height<=15: print ('Коробка №1')
+elif width>200 or length>200 or height>200: print ('Упаковка для лыж')
+elif 15<width<50 or 15<length<50 or 15<height<50: print ('Коробка №2')
+else: print ('Коробка №3')
